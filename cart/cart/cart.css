@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Cart Container */
+.cart-container {
+    width: 85%;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+thead {
+    background: #000000;
+    color: white;
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-size: 18px;
+}
+
+td img {
+    width: 70px;
+    border-radius: 8px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Quantity Input */
+.quantity {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+/* Remove Button */
+.remove-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+    background: #c82333;
+}
+
+/* Cart Summary */
+.cart-summary {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cart-summary h3 {
+    margin-bottom: 12px;
+}
+
+.checkout-btn {
+    background: #000000;
+    color: white;
+    padding: 12px 22px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cart-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .product {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        background: white;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .checkout-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
